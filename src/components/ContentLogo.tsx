@@ -1,6 +1,23 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import img from '/public/img/triple2x.png';
+
+export default function ContentLogo() {
+  return (
+    <Wrapper>2021년 12월 기준</Wrapper>
+  )
+}
+
+const move = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+`;
 
 const Wrapper = styled.div`
   box-sizing: border-box;
@@ -16,10 +33,5 @@ const Wrapper = styled.div`
   background-size: 400px 338px;
   padding-top: 280px;
   font-size: 15px;
+  animation: ${move} 700ms ease-in;
 `;
-
-export default function ContentLogo() {
-  return (
-    <Wrapper>2021년 12월 기준</Wrapper>
-  )
-}

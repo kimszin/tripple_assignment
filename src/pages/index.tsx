@@ -1,9 +1,11 @@
 import React from 'react'
-import SectionContainer from "../components/SectionContainer"
+import StatisticSection from '../components/StatisticSection'
 
 export default function HomeworkPage() {
   return (
-    <SectionContainer />
+    <div>
+      <StatisticSection />
+    </div>
   )
 }
 
